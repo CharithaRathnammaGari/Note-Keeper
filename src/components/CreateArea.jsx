@@ -34,7 +34,9 @@ function CreateArea(props) {
   function expand() {
     setExpanded(true);
   }
-
+  function reset(){
+    setExpanded(false);
+  }
   return (
     <div>
       <form className="create-note">
@@ -57,7 +59,7 @@ function CreateArea(props) {
         />
         <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
-            <AddIcon />
+            <AddIcon onClick={reset}/>
           </Fab>
         </Zoom>
       </form>
